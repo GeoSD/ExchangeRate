@@ -9,25 +9,22 @@
 import UIKit
 
 class RateViewController: UIViewController {
+    
+    var date = ""
+    var rateForDate = [String]()
+    var usdRate = ""
+    var eurRate = ""
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var usdRateLabel: UILabel!
     @IBOutlet weak var eurRateLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        dateLabel.text = date
+        print(rateForDate)
+        usdRateLabel.text = rateForDate[0]
+        eurRateLabel.text = rateForDate[1]
 
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
