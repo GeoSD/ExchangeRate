@@ -15,6 +15,7 @@
 		6622F16B215A3CD500F1B418 /* ExchangeRateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6622F16A215A3CD500F1B418 /* ExchangeRateTests.swift */; };
 		6622F176215B524900F1B418 /* DateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6622F175215B524900F1B418 /* DateTableViewController.swift */; };
 		6622F17D215B743500F1B418 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6622F17C215B743500F1B418 /* RateViewController.swift */; };
+		6622F17F215BE64700F1B418 /* RateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6622F17E215BE64700F1B418 /* RateService.swift */; };
 		7DB3CFCAF34F66BC42330FC8 /* Pods_ExchangeRateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B5FE3CE5C5B600F2090DE2 /* Pods_ExchangeRateTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		6622F16C215A3CD500F1B418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6622F175215B524900F1B418 /* DateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewController.swift; sourceTree = "<group>"; };
 		6622F17C215B743500F1B418 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
+		6622F17E215BE64700F1B418 /* RateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateService.swift; sourceTree = "<group>"; };
 		7B105083B110F954FEDA3A1D /* Pods-ExchangeRateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExchangeRateTests/Pods-ExchangeRateTests.release.xcconfig"; sourceTree = "<group>"; };
 		93F22069B03D882DB0283FC1 /* Pods_ExchangeRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExchangeRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B5FE3CE5C5B600F2090DE2 /* Pods_ExchangeRateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExchangeRateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,7 @@
 				6622F159215A3CD100F1B418 /* Main.storyboard */,
 				6622F175215B524900F1B418 /* DateTableViewController.swift */,
 				6622F17C215B743500F1B418 /* RateViewController.swift */,
+				6622F17E215BE64700F1B418 /* RateService.swift */,
 				6622F15C215A3CD500F1B418 /* Assets.xcassets */,
 				6622F15E215A3CD500F1B418 /* LaunchScreen.storyboard */,
 				6622F161215A3CD500F1B418 /* Info.plist */,
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6622F17D215B743500F1B418 /* RateViewController.swift in Sources */,
+				6622F17F215BE64700F1B418 /* RateService.swift in Sources */,
 				6622F156215A3CD100F1B418 /* AppDelegate.swift in Sources */,
 				6622F176215B524900F1B418 /* DateTableViewController.swift in Sources */,
 			);

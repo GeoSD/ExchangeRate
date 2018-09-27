@@ -7,17 +7,12 @@
 //
 
 import UIKit
-import Alamofire
 
 class DateTableViewController: UITableViewController {
     
-    var loadMore = false
     let today = Date()
     var dates = [Date]()
-    var ratesForDate = [String]()
-    
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,11 +20,7 @@ class DateTableViewController: UITableViewController {
             let day: Date = today - TimeInterval(86400 * index)
             dates.append(day)
         }
-        
-        //        print(dates)
     }
-    
-    // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -54,29 +45,21 @@ class DateTableViewController: UITableViewController {
         let contentHeight = scrollView.contentSize.height
         
         if offsetY > contentHeight - scrollView.frame.height {
-            if !loadMore {
-                loadMoreDates()
-            }
+            loadMoreDates()
         }
     }
     
     func loadMoreDates() {
-        loadMore = true
-        //        print("Start loading more...")
+        var newArray = dates
+        newArray = [dates.last! - 1 * 86400, dates.last! - 2 * 86400, dates.last! - 3 * 86400,
+                    dates.last! - 4 * 86400, dates.last! - 5 * 86400, dates.last! - 6 * 86400,
+                    dates.last! - 7 * 86400, dates.last! - 8 * 86400, dates.last! - 9 * 86400,
+                    dates.last! - 10 * 86400, dates.last! - 11 * 86400, dates.last! - 12 * 86400]
         
-        var newArray = self.dates
-        newArray = [self.dates.last! - 1 * 86400, self.dates.last! - 2 * 86400, self.dates.last! - 3 * 86400,
-                    self.dates.last! - 4 * 86400, self.dates.last! - 5 * 86400, self.dates.last! - 6 * 86400,
-                    self.dates.last! - 7 * 86400, self.dates.last! - 8 * 86400, self.dates.last! - 9 * 86400,
-                    self.dates.last! - 10 * 86400, self.dates.last! - 11 * 86400, self.dates.last! - 12 * 86400]
-        
-        self.dates.append(contentsOf: newArray)
-        self.loadMore = false
-        self.tableView.reloadData()
+        dates.append(contentsOf: newArray)
+        tableView.reloadData()
     }
-    
-    // MARK: - Navigation
-    
+      
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowRates" {
             
@@ -86,12 +69,9 @@ class DateTableViewController: UITableViewController {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yyyy"
             let dateString = dateFormatter.string(from: dates[indexPathRow!])
-            //            print(dateString)
-            
+
             ratesVC.date = dateString
         }
     }
-    
-
 }
 
